@@ -10,8 +10,8 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+    async function handleSubmit(event) {
+      event.preventDefault();
 
     if (!correo || !contraseña) {
       setError('Por favor, complete todos los campos.');
