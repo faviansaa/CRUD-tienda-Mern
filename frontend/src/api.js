@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://crud-tienda-mern.onrender.com"
+    baseURL: "https://crud-backend-hvmw.onrender.com"
 })
 
 
