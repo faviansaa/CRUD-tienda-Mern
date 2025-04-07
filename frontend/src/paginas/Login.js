@@ -20,7 +20,7 @@ export default function Login() {
 
       try {
         // Enviar las credenciales al backend para obtener el token
-        const response = await axios.post('https://crud-tienda-mern.onrender.com/api/usuario/auth/iniciarSesion', {
+        const response = await axios.post('https://crud-backend-hvmw.onrender.com/api/usuario/auth/iniciarSesion', {
           correo,
           contraseña
         });

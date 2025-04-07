@@ -21,7 +21,7 @@ export default function Registro() {
 
             try {
                 // Enviar los datos del formulario al backend para registrar al usuario
-                const response = await axios.post('https://crud-tienda-mern.onrender.com/api/usuario/auth/registrar', {
+                const response = await axios.post('https://crud-backend-hvmw.onrender.com/api/usuario/auth/registrar', {
                     nombre,
                     correo,
                     contraseña
