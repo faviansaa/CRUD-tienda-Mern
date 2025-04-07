@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://crud-tienda-mern.onrender.com/', 
+    origin: 'https://crud-tienda-mern.onrender.com', 
     credentials: true
   }));
 
