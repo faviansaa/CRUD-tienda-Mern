@@ -7,7 +7,16 @@ const api = axios.create({
 
 
 // Productos
-export const getProducto = () => api.get('/api/producto/')
+export const getProducto = async() => {
+    const token = localStorage.getItem("token");
+
+    return await axios.get("https://crud-backend-hvmw.onrender.com/api/producto",{
+        headers:{
+            Authorization:`Bearer ${token}`
+        }
+    })
+
+}
 export const createProducto = (producto) => api.post('/api/producto/crear', producto)
 export const updateProducto = (id, producto) => api.put(`/api/producto/${id}`, producto);
 export const deleteProducto = (id) => api.delete(`/api/producto/${id}`);
