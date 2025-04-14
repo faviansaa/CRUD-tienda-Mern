@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router();
 const cors = require('cors')
 const controladorCategoria = require('../controladores/categoriaController')
+const middlewareAutenticacion = require('../middleware/middlewareAutenticacion')
 
-
-router.post('/crear', controladorCategoria.crearCategoria);
-router.get('/:id?', controladorCategoria.obtenerCategoria);
-router.put('/:id?', controladorCategoria.actualizarCategoria);
-router.delete('/:id', controladorCategoria.eliminarCategoria)
+router.post('/crear',middlewareAutenticacion, controladorCategoria.crearCategoria);
+router.get('/:id?',middlewareAutenticacion, controladorCategoria.obtenerCategoria);
+router.put('/:id?',middlewareAutenticacion, controladorCategoria.actualizarCategoria);
+router.delete('/:id?',middlewareAutenticacion, controladorCategoria.eliminarCategoria);
 module.exports = router;
